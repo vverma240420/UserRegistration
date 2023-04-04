@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace UserRegistration
 {
+
     public class UserValidation
     {
         public static void ValidateFirstName()
@@ -51,6 +52,13 @@ namespace UserRegistration
         {
             Console.WriteLine("Password: ");
             string pattern = "^(?=.*[A-Z]).{8,}$";//* for all . for atleast ?= must match the atleast condition
+            string input = Console.ReadLine();
+            ValidatePattern(input, pattern);
+        }
+        public static void ValidatePasswordRule3()
+        {
+            Console.WriteLine("Password: ");
+            string pattern = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";//* for all . for atleast ?= must match the atleast condition
             string input = Console.ReadLine();
             ValidatePattern(input, pattern);
         }
