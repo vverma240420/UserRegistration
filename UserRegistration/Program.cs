@@ -8,7 +8,7 @@
             Console.WriteLine("Welcome to Registration Program");
             Console.WriteLine("Choose the option for validation you want to perform");
             Console.WriteLine("1. Validate First Name \n2. Validate Last Name \n3. Validate Email \n4. Validate Mobile Number " +
-                "\n5. Validate Password Rule1");
+                "\n5. Validate Password Rule1 \n6. Validate Password Rule2 ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -26,6 +26,9 @@
                     break;
                 case 5:
                     UserValidation.ValidatePasswordRule1();
+                    break;
+                case 6:
+                    UserValidation.ValidatePasswordRule2();
                     break;
                 default:
                     Console.WriteLine("Please Choose the correct option");
