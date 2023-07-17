@@ -62,6 +62,14 @@ namespace UserRegistration
             string input = Console.ReadLine();
             ValidatePattern(input, pattern);
         }
+        public static void ValidatePasswordRule4()
+        {
+            Console.WriteLine("Password: ");
+            string pattern = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
+            string input = Console.ReadLine();
+            ValidatePattern(input, pattern);
+        }
+
         public static void ValidatePattern(string input, string pattern)
         {
             if (Regex.IsMatch(input, pattern))
